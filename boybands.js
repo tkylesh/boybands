@@ -16,19 +16,31 @@ var bandElement = document.getElementById('boy-bands');
 // Get a reference to the appropriate DOM element for vegetables
 var veggieElement = document.getElementById('vegetables');
 
+//var to insert into div
+var insbands = "<h1>boy-bands</h1><ul> "
+var insveg = "<h1>Vegetable</h1><ul>"
+
 // Start looping
-for (var loopTracker = 0; loopTracker < loopCount; loopTracker += 1) {
+for (var loopTracker = 0; loopTracker < loopCount; loopTracker ++) {
 
   // Add the band names into the correct <div>
   currentBand = bands[loopTracker];
-  	bandElement.innerHTML(
-  		<p>currentBand<p>);
+  	insbands += "<li>"+ currentBand +"</li></br>";
+  	
+  	
 
 
   // Add the veggie names into the correct <div>
   currentVeggie = vegetables[loopTracker];
+  insveg += "<li>"+ currentVeggie +"</li></br>";
+
 
 }
+
+insbands += "</ul>";
+insveg +="</ul>"
+bandElement.innerHTML=insbands;
+veggieElement.innerHTML=insveg;
 /*Loop through the two arrays provided 
 (bands and vegetables) and output each 
 element in the arrays into their corresponding 
